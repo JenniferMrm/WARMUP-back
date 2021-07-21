@@ -1,0 +1,1 @@
+INSERT INTO `avatars` (src) VALUES ('https://source.unsplash.com/0fJKvGUDztg/800x800'), ('https://source.unsplash.com/TmZI74uzxqQ/800x800'), ('https://source.unsplash.com/bRG2C0FAQEY/800x800'), ('https://source.unsplash.com/IlqW-8F5lk4/800x800'), ('https://source.unsplash.com/l-NHhR-p5lg/800x800'), ('https://source.unsplash.com/MfLGvcy9ooY/800x800');
