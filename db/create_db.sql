@@ -6,6 +6,7 @@ CREATE TABLE `users` (
   `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `name` varchar(255),
   `password` varchar(255),
+  `instrument` varchar(255),
   `experience` varchar(255),
   `avatar_id` int,
   `training_time` int
