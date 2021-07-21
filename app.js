@@ -1,11 +1,20 @@
 const express = require("express");
 const app = express();
 const connection = require("./db-config");
-// const cors = require("cors");
+const cors = require("cors");
 // const cookieParser = require("cookie-parser");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(
+  cors({
+    // credentials : true,
+    origin: [
+      `${process.env.REACT_APP_LABELIT_FRONT_URL}`,
+      "http://localhost:3000",
+    ],
+  })
+);
 
 require("./routes")(app);
 
