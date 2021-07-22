@@ -1,7 +1,12 @@
 const db = require("../db-config");
 
-const find = async () => {
-  return db.promise().query("SELECT * FROM users");
+const find = async (id) => {
+  return db
+    .promise()
+    .query(
+      "SELECT name, instrument, experience, training_time, src FROM users JOIN avatars ON users.avatar_id = avatars.id WHERE users.id = ?",
+      [id]
+    );
 };
 
 const create = async ({

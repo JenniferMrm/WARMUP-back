@@ -4,6 +4,11 @@ const find = async () => {
   return db.promise().query("SELECT * FROM trainings");
 };
 
+const findOne = async (id) => {
+  return db
+    .promise()
+    .query("SELECT * FROM trainings WHERE trainings.id = ?", [id]);
+};
 const create = async ({ title, description, link, author }) => {
   return db
     .promise()
@@ -19,4 +24,4 @@ const update = async (id, newAttributes) => {
     .query("UPDATE trainings SET ? WHERE id = ?", [newAttributes, id]);
 };
 
-module.exports = { find, create, update };
+module.exports = { find, findOne, create, update };

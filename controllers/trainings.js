@@ -1,7 +1,12 @@
-const { find, create, update } = require("../models/trainings");
+const { find, findOne, create, update } = require("../models/trainings");
 
 const getTrainings = async (req, res) => {
   const [data] = await find();
+  res.json(data);
+};
+
+const getOneTraining = async (req, res) => {
+  const [data] = await find(req.params.id);
   res.json(data);
 };
 
@@ -24,4 +29,9 @@ const updateTraining = async (req, res) => {
   }
 };
 
-module.exports = { getTrainings, createTraining, updateTraining };
+module.exports = {
+  getTrainings,
+  getOneTraining,
+  createTraining,
+  updateTraining,
+};
