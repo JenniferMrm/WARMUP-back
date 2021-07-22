@@ -5,9 +5,7 @@ const find = async () => {
 };
 
 const findOne = async (id) => {
-  return db
-    .promise()
-    .query("SELECT * FROM trainings WHERE trainings.id = ?", [id]);
+  return db.promise().query("SELECT * FROM trainings WHERE id = ?", [id]);
 };
 const create = async ({ title, description, link, author }) => {
   return db

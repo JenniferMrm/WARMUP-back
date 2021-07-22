@@ -6,7 +6,7 @@ const getTrainings = async (req, res) => {
 };
 
 const getOneTraining = async (req, res) => {
-  const [data] = await find(req.params.id);
+  const [data] = await findOne(req.params.id);
   res.json(data);
 };
 
