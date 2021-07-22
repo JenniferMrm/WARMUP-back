@@ -1,7 +1,7 @@
 const { find, create, update } = require("../models/users");
 
-const getUsers = async (req, res) => {
-  const [data] = await find();
+const getUser = async (req, res) => {
+  const [data] = await find(req.params.id);
   res.json(data);
 };
 
@@ -24,4 +24,4 @@ const updateUser = async (req, res) => {
   }
 };
 
-module.exports = { getUsers, createUser, updateUser };
+module.exports = { getUser, createUser, updateUser };
