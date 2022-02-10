@@ -8,7 +8,7 @@ I decided to create an application that could help me while practicing bass guit
 
 All files illustrating the research for the conception are located in the folder `DB` in the back part, and in the folder `public/assets` in the front part.
 
-### If you want to run the project localy, you can follow these steps :
+## If you want to run the project localy, you can follow these steps :
 
 ⋅⋅* Clone the project.
 
